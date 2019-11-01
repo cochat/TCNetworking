@@ -30,6 +30,7 @@
 		348F314B1D0DA8A600CEE872 /* TCUploadManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 348F313D1D0DA8A600CEE872 /* TCUploadManager.m */; };
 		348F314C1D0DA8A600CEE872 /* TCUploadOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 348F313F1D0DA8A600CEE872 /* TCUploadOperation.m */; };
 		5BD1B5072CCD00E1E5C2885E /* libPods-TCNetworkingTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A8A71B2824165EEB46A462D2 /* libPods-TCNetworkingTests.a */; };
+		B4E9792B236C398600A10D95 /* NSData+DataHealing.m in Sources */ = {isa = PBXBuildFile; fileRef = B4E9792A236C398600A10D95 /* NSData+DataHealing.m */; };
 		C8C69EA913F0E61EAA78A8A8 /* libPods-TCNetworking.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 07518B8A0FD9ACCDD724DA20 /* libPods-TCNetworking.a */; };
 		DDA22A4697C06B52438BF5B5 /* libPods-TCNetworkingUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4EA519D01531C711008A945D /* libPods-TCNetworkingUITests.a */; };
 /* End PBXBuildFile section */
@@ -103,6 +104,8 @@
 		7054D587F147A69CEFDCBAC3 /* Pods-TCNetworkingUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TCNetworkingUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TCNetworkingUITests/Pods-TCNetworkingUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		94BDCF0E52BAC5949389959D /* Pods-TCNetworking.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TCNetworking.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TCNetworking/Pods-TCNetworking.debug.xcconfig"; sourceTree = "<group>"; };
 		A8A71B2824165EEB46A462D2 /* libPods-TCNetworkingTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TCNetworkingTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B4E97929236C398600A10D95 /* NSData+DataHealing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+DataHealing.h"; sourceTree = "<group>"; };
+		B4E9792A236C398600A10D95 /* NSData+DataHealing.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+DataHealing.m"; sourceTree = "<group>"; };
 		FAA7A35090EDB410CB897315 /* Pods-TCNetworkingUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TCNetworkingUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-TCNetworkingUITests/Pods-TCNetworkingUITests.release.xcconfig"; sourceTree = "<group>"; };
 		FBF2BB699F1342062057E5F6 /* Pods-TCNetworkingTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TCNetworkingTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-TCNetworkingTests/Pods-TCNetworkingTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -241,6 +244,8 @@
 				348F313D1D0DA8A600CEE872 /* TCUploadManager.m */,
 				348F313E1D0DA8A600CEE872 /* TCUploadOperation.h */,
 				348F313F1D0DA8A600CEE872 /* TCUploadOperation.m */,
+				B4E97929236C398600A10D95 /* NSData+DataHealing.h */,
+				B4E9792A236C398600A10D95 /* NSData+DataHealing.m */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -351,6 +356,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -537,6 +543,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				348F31481D0DA8A600CEE872 /* TCNetworkingHelper.m in Sources */,
+				B4E9792B236C398600A10D95 /* NSData+DataHealing.m in Sources */,
 				348F30D21D0DA7C100CEE872 /* ViewController.m in Sources */,
 				348F31431D0DA8A600CEE872 /* TCCommAPIClient.m in Sources */,
 				348F31421D0DA8A600CEE872 /* TCBatchRequestManager.m in Sources */,

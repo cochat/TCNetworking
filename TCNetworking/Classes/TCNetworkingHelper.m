@@ -7,6 +7,7 @@
 //
 
 #import "TCNetworkingHelper.h"
+#import "NSData+DataHealing.h"
 
 @implementation TCNetworkingHelper
 
@@ -18,11 +19,13 @@
  *  @return 返回解析之后的字符串数据
  */
 + (NSString *)parseResponse:(id)responseObject {
-    NSString *response = [[NSString alloc] initWithData:responseObject
+    NSData *responseData = [(NSData *)responseObject UTF8String];
+    NSString *response = [[NSString alloc] initWithData:responseData
                                                encoding:NSUTF8StringEncoding];
     if (!response) {
+        responseData = [(NSData *)responseObject GB18030Data];
         unsigned long encode = CFStringConvertEncodingToNSStringEncoding(kCFStringEncodingGB_18030_2000);
-        response = [[NSString alloc] initWithData:responseObject encoding:encode];
+        response = [[NSString alloc] initWithData:responseData encoding:encode];
     }
     response = [self replaceBlack:response];
     
