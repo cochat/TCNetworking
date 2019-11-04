@@ -19,13 +19,15 @@
  *  @return 返回解析之后的字符串数据
  */
 + (NSString *)parseResponse:(id)responseObject {
-    NSData *responseData = [(NSData *)responseObject UTF8String];
-    NSString *response = [[NSString alloc] initWithData:responseData
-                                               encoding:NSUTF8StringEncoding];
+    NSString *response = [[NSString alloc] initWithData:responseObject encoding:NSUTF8StringEncoding];
     if (!response) {
-        responseData = [(NSData *)responseObject GB18030Data];
         unsigned long encode = CFStringConvertEncodingToNSStringEncoding(kCFStringEncodingGB_18030_2000);
-        response = [[NSString alloc] initWithData:responseData encoding:encode];
+        response = [[NSString alloc] initWithData:responseObject encoding:encode];
+        // 如果转码失败，去除非法字符后重新转
+        if (!response) {
+            NSData *responseData = [(NSData *)responseObject GB18030Data];
+            response = [[NSString alloc] initWithData:responseData encoding:encode];
+        }
     }
     response = [self replaceBlack:response];
     
