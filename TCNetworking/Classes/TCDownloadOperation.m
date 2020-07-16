@@ -71,7 +71,7 @@ static NSString * const kTCDownloadLockName = @"com.ichensheng.networking.downlo
         [self.lock unlock];
         return;
     }
-    CFRunLoopRun();
+//    CFRunLoopRun();
     self.executing = YES;
     @weakify(self)
     self.downloadTask =
@@ -101,7 +101,7 @@ static NSString * const kTCDownloadLockName = @"com.ichensheng.networking.downlo
             self.successBlock(response, filePath);
         }
         [self done];
-        CFRunLoopStop(CFRunLoopGetCurrent());
+//        CFRunLoopStop(CFRunLoopGetCurrent());
     } failure:^(NSURLResponse *response, NSError *error) {
         @strongify(self)
         if (!self) {
@@ -111,7 +111,7 @@ static NSString * const kTCDownloadLockName = @"com.ichensheng.networking.downlo
             self.failureBlock(response, error);
         }
         [self done];
-        CFRunLoopStop(CFRunLoopGetCurrent());
+//        CFRunLoopStop(CFRunLoopGetCurrent());
     } useClient:self.client];
     [self.lock unlock];
 }
@@ -132,7 +132,7 @@ static NSString * const kTCDownloadLockName = @"com.ichensheng.networking.downlo
     if (self.isExecuting) self.executing = NO;
     if (!self.isFinished) self.finished = YES;
     [self reset];
-    CFRunLoopStop(CFRunLoopGetCurrent());
+//    CFRunLoopStop(CFRunLoopGetCurrent());
     [self.lock unlock];
 }
 
